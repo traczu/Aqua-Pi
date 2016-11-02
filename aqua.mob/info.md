@@ -1,0 +1,1 @@
+# Aplikacja na Androida i ew. iOS.

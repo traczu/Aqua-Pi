@@ -1,0 +1,1 @@
+# Daemon, czyli sterowanie urządzeniami akwarium dedykowaną aplikacją.
