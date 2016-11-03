@@ -2,4 +2,4 @@
 
 # Aqua Pi
 
-![](./docs/schemat.png) 
+![](./docs/schemat.svg) 
