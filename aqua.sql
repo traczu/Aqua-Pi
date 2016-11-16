@@ -6,6 +6,8 @@ Grupa https://groups.google.com/forum/#!forum/aqua-pi
 
 CREATE DATABASE `aqua` /*!40100 DEFAULT CHARACTER SET latin1 */;
 
+USE `aqua`;
+
 CREATE TABLE `aquariums` (
   `id` int(11) NOT NULL,
   `name` varchar(45) DEFAULT NULL,
