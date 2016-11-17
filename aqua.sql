@@ -4,26 +4,29 @@ GitHub https://github.com/traczu/Aqua-Pi
 Grupa https://groups.google.com/forum/#!forum/aqua-pi
 */
 
-CREATE DATABASE `aqua` /*!40100 DEFAULT CHARACTER SET latin1 */;
+CREATE DATABASE `aqua`;
 
 USE `aqua`;
 
 CREATE TABLE `aquariums` (
-  `id` int(11) NOT NULL,
-  `name` varchar(45) DEFAULT NULL,
+  `id` INT NOT NULL,
+  `name` VARCHAR(45) NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `name_UNIQUE` (`name`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+);
 
 CREATE TABLE `devices` (
-  `id` int(11) NOT NULL,
-  `aquarium_id` int(11) DEFAULT NULL,
-  `name` varchar(45) DEFAULT NULL,
-  `description` varchar(500) DEFAULT NULL,
+  `id` INT NOT NULL,
+  `aquarium_id` INT NULL,
+  `name` VARCHAR(45) NULL,
+  `description` VARCHAR(500) NULL,
   PRIMARY KEY (`id`),
-  KEY `id_idx` (`aquarium_id`),
-  CONSTRAINT `id` FOREIGN KEY (`aquarium_id`) REFERENCES `aquariums` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  CONSTRAINT `fk_devices_aquariums_aquarium_id` 
+    FOREIGN KEY (`aquarium_id`) 
+    REFERENCES `aquariums` (`id`) 
+    ON DELETE NO ACTION 
+    ON UPDATE NO ACTION
+);
 
 /* 
 No mamy zapał do tworzenia tej bazy...
