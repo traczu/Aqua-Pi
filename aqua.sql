@@ -12,7 +12,7 @@ CREATE TABLE `aquariums` (
   `id` INT NOT NULL,
   `name` VARCHAR(45) NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `name_UNIQUE` (`name`)
+  UNIQUE KEY `ux_name` (`name`)
 );
 
 CREATE TABLE `devices` (
@@ -21,7 +21,8 @@ CREATE TABLE `devices` (
   `name` VARCHAR(45) NULL,
   `description` VARCHAR(500) NULL,
   PRIMARY KEY (`id`),
-  CONSTRAINT `fk_devices_aquariums_aquarium_id` 
+  KEY `ix_aquarium_id` (`aquarium_id`),
+  CONSTRAINT `fk_aquariums_devices_aquarium_id` 
     FOREIGN KEY (`aquarium_id`) 
     REFERENCES `aquariums` (`id`) 
     ON DELETE NO ACTION 
