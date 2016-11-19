@@ -2,6 +2,10 @@
 Skrypt tworzący bazę danych aqua.db wraz ze strukturą i danymi testowymi.
 GitHub https://github.com/traczu/Aqua-Pi
 Grupa https://groups.google.com/forum/#!forum/aqua-pi
+pk - PRIMARY KEY
+fk - FOREIGN KEY
+ix - INDEX (KEY)
+ux - UNIQUE INDEX (UNIQUE KEY)
 */
 
 CREATE DATABASE `aqua`;
